@@ -16,7 +16,13 @@ use PhpParser\Node\Scalar\MagicConst\Dir;
 */
 
 Route::get('/', function () {
-    return view('posts');
+
+    return view('posts', 
+    [   
+        'posts' => Post::all()
+    ]
+);
+
 });
 
 

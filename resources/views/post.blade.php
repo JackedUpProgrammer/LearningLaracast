@@ -21,5 +21,5 @@
 </article>
 
 <a href="/">Go Back</a>
- </body>
+</body>
 </html>

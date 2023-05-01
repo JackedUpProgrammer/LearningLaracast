@@ -12,32 +12,19 @@
 
     {{-- link js --}}
     <script src="/app.js"></script>
-
  </head>
  <body>
+
+
+   <?php foreach($posts as $post) : ?>
+
   <article>
-   <h1>
-     <a href="/posts/my-first-post">My First Post</a> 
-   </h1>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minus ad reiciendis unde, consequuntur id harum eveniet sapiente dolor quam eligendi nesciunt eos est earum explicabo, aspernatur esse quis enim!</p>
+   <?= $post; ?>
   </article>
 
+  <?php endforeach; ?>
 
 
-   <article>
-    <h1>
-      <a href="/posts/my-second-post">My Second Post</a> 
-    </h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, at debitis molestias, minima quis laborum delectus quisquam id similique iste sit quos libero recusandae repellat ut illo. Velit, nisi! Obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minus ad reiciendis unde, consequuntur id harum eveniet sapiente dolor quam eligendi nesciunt eos est earum explicabo, aspernatur esse quis enim!</p>
-   </article>
 
-
-   
-   <article>
-      <h1>
-         <a href="/posts/my-third-post">My Third Post</a> 
-      </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ad quae ex laudantium, facilis soluta, repellendus quis animi qui perspiciatis reiciendis illo quod minus possimus modi minima iste repudiandae sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minus ad reiciendis unde, consequuntur id harum eveniet sapiente dolor quam eligendi nesciunt eos est earum explicabo, aspernatur esse quis enim!</p>
-     </article>
   </body>
  </html>
