@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Scalar\MagicConst\Dir;
 
@@ -20,16 +21,14 @@ Route::get('/', function () {
 
 
 
-Route::get('posts/{post}', function ($slug) {
-    $path = __DIR__ . "/../resources/posts/$slug.html";
-
-    if(! file_exists($path)){
-        return redirect('/');
-    }
-
-    $post = file_get_contents($path);
-
-    return view('post',[
-      'post' => $post  
-    ]);
-});
+Route::get('posts/{post}', function($slug) {
+    //find a post by its slug and pass it to a view called "post"
+        return view(
+            //this post is a view
+            'post', 
+            [    //first post is a variable name and second post is a model
+                'post' => Post::find($slug),
+            ]
+        );
+       
+})->where('post', '[A-z_\-]+');
